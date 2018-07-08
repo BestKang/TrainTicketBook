@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.model.User" table="user" schema="ticketbook">
+        <id name="userName">
+            <column name="userName" sql-type="varchar(16)" length="16"/>
+        </id>
+        <property name="userPw">
+            <column name="userPw" sql-type="varchar(8)" length="8"/>
+        </property>
+        <property name="mobile">
+            <column name="mobile" sql-type="varchar(11)" length="11" not-null="true"/>
+        </property>
+        <property name="contacts">
+            <column name="contacts" sql-type="varchar(255)" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

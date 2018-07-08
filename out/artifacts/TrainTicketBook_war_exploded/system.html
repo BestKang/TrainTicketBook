@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta  charset="utf-8">
+<title>订票中心</title>
+
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<script type="text/javascript" src="js/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+<script src="js/echarts.min.js"></script>
+<link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+<link href="css/react.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+<body>
+<div class="top">
+    <div class="toptitle">
+    火车订票系统 Train Seat Reservation System
+    </div>
+    <div class="quit"><button type="button" class="btn btn-primary" onclick="window.location.href=''"><span class="glyphicon glyphicon-log-in"></span> 登录</button>
+    </div>
+</div>
+<div class="left">
+    <div style="height:400px;width:300px;margin-top:100px;margin-left: 100px;">
+    <form class="bs-example bs-example-form" name="outform" role="form">      
+    <div class="input-group">
+    <span class="input-group-addon">出发地</span>
+    <input type="text" class="form-control" name="depart">
+    </div>
+    <br>
+    <div class="input-group">
+    <span class="input-group-addon">目的地</span>
+    <input type="text" class="form-control" name="terminus">
+    </div>
+    <br>
+    <div class="input-group">
+    <span class="input-group-addon">时间</span>
+        <div class="controls input-append date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+        <input class="form-control"" type="text" value="" >
+        <span class="add-on"><i class="icon-th"></i></span>
+        </div>
+        <input type="hidden" id="dtp_input2" value="" /><br/>
+    </div>
+    <br>
+    <button type="submit" class="button btn btn-info" onclick="yes()"><span class="  glyphicon glyphicon-search"></span> 查询</button>
+    </form>
+</div>
+</div>
+<div class="right">
+	<div class="revise">
+	    <table class="table table-condensed">
+            <thead>
+                <tr>
+                    <th>车次</th>
+                    <th>出发站</th>
+                    <th>到达站</th>
+                    <th>出发时间</th>
+                    <th>到达时间</th>
+                    <th>历时</th>
+                    <th>票价</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>G1221</td>
+                    <td>杭州东</td>
+                    <td>上海南</td>
+                    <td>17:40</td>
+                    <td>19:00</td>
+                    <td>1小时20分钟</td>
+                    <td>30元</td>
+                </tr>
+            </tbody>
+            </table>
+    </div>
+</div>
+<div class="footer">
+    <div class="footfont">
+    © 2017 Bootstrap Train Seat Reservation System. 杭州电子科技大学 - via team MAX
+    </div>
+
+</div>
+
+<script type="text/javascript">
+$('.form_datetime').datetimepicker({
+    //language:  'zh-CN',
+    weekStart: 1,
+    todayBtn:  1,
+    autoclose: 1,
+    todayHighlight: 1,
+    startView: 2,
+    forceParse: 0,
+    showMeridian: 1
+});
+
+$('.form_date').datetimepicker({
+    language:  'zh-CN',
+    weekStart: 1,
+    todayBtn:  1,
+    autoclose: 1,
+    todayHighlight: 1,
+    startView: 2,
+    minView: 2,
+    forceParse: 0
+});
+
+$('.form_time').datetimepicker({
+    language:  'zh-CN',
+    weekStart: 1,
+    todayBtn:  1,
+    autoclose: 1,
+    todayHighlight: 1,
+    startView: 1,
+    minView: 0,
+    maxView: 1,
+    forceParse: 0
+});
+</script>
+
+</body>
+</html>

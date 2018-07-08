@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+    <package name="javaee" extends="struts-default,json-default">
+        <action name="loginaction" class="login" method="login">
+            <result name="success" >/index.jsp</result>
+            <result name="fail">/login.jsp</result>
+        </action>
+        <action name="searchaction" class="searchTrainAction" method="Search">
+            <result name="success">index.jsp</result>
+            <result name="fail">index.jsp</result>
+        </action>
+        <action name="userupdate" class="userUpdate" method="updateuser">
+            <result name="success">index.jsp</result>
+            <result name="fail">usermanage.jsp</result>
+        </action>
+        <action name="stationaction" class="stationAction" method="update">
+            <result name="success">index.jsp</result>
+        </action>
+        <action name="trainaction" class="trainAction" method="update">
+            <result name="success">index.jsp</result>
+        </action>
+    </package>
+</struts>

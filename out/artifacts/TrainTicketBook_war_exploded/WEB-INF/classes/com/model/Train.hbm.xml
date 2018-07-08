@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.model.Train" table="train" schema="ticketbook">
+        <id name="trainId" column="trainId"/>
+        <property name="startStation" column="startStation"/>
+        <property name="finalStation" column="finalStation"/>
+        <property name="statTime" column="statTime"/>
+        <property name="arTime" column="arTime"/>
+        <property name="ticketInfo" column="ticketInfo"/>
+        <property name="stopStaion" column="stopStaion"/>
+    </class>
+</hibernate-mapping>

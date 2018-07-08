@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.model.Info" table="info" schema="ticketbook">
+        <composite-id  class="com.model.InfoPK">
+            <key-property name="stationA" column="stationA"/>
+            <key-property name="stationB" column="stationB"/>
+        </composite-id>
+        <property name="distance" column="distance"/>
+        <property name="ticketprice" column="ticketprice"/>
+    </class>
+</hibernate-mapping>
